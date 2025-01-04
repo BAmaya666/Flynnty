@@ -1,0 +1,326 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  @media (max-width: 768px) {
+    .icon {
+        display: none; 
+    }
+
+    nav {
+        justify-content: center; /* Center the navigation bar */
+    }
+
+    nav > ul {
+        width: 100%; /* Take up the full width */
+        justify-content: space-around; /* Evenly space items */
+    }
+    .hook {
+        flex-direction: column; /* Stack the inner divs vertically */
+        align-items: center; /* Center the inner divs horizontally */
+    }
+
+    .first {
+        flex: 1 1 100%; /* Make each inner div take full width */
+        max-height: none; /* Remove height restriction */
+    }
+
+    .social {
+        width: 100%; /* Make the social div take full width */
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+
+    h1 {
+        text-align: center; /* Center-align the heading text */
+    }
+
+    p {
+        text-align: center; /* Center-align the paragraph text */
+        padding: 0 10px; /* Add some padding for better readability */
+    }
+
+    .logo, .spiral {
+        width: 80%; /* Adjust the image width for smaller screens */
+    }
+    .links {
+        flex-direction: column;
+    }
+    .acerca {
+        flex-direction: column;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    z-index: 4;
+}
+nav {
+    background: #34A0A4;
+    font-size: 16px;
+    color: white;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    
+}
+.icon{
+    width: 90px;
+    padding-left: 20px;
+}
+.icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+nav > ul {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 50px;
+    align-items: center;
+}
+li {
+    font-family: "Inter";
+    list-style-type: none;
+    text-shadow: .5px 1.5px #1E6091;
+}
+li:hover {
+    color: #D9ED92;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    color: #D9ED92;
+}
+.hook {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0 1px 4%;
+    align-items: center;
+}
+.first {
+    
+    flex: 1 1 calc(50% - 16px);
+    max-height: 100vh;
+}
+.logo {
+    width: 100%;
+}
+main {
+    overflow-x: hidden;
+    min-height: 100vh;
+    z-index: 1;
+}
+h1 {
+    font-family: inter;
+    font-weight: bold;
+    color: #1E6091;
+    font-size: 32px; 
+}
+.social {
+    /* width: 40%; */
+    max-height: 100vh;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    
+}
+p {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: inter;
+    font-size: 20px;
+    margin: 0;
+}
+.hookito {
+    color: #1E6091;
+    padding-bottom: 30px;
+}
+.spiral {
+    width: 100%;
+    max-height: 100vh;
+}
+#services {
+    margin: 0;
+    background-color: #1E6091;
+    padding: 2.5% 4% 5%;
+}
+h2 {
+    font-family: inter;
+    font-weight: bold;
+    color: #fff;
+    font-size: 52px; 
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    gap: 16px;
+    padding: 0px 0px 5%;
+}
+
+h3 {
+font-family: inter;
+font-weight: bold;
+font-size: 28px;
+padding-top: 20px;
+color: #ffff;
+text-shadow: 1.5px 1.5px #000;
+z-index: 2;
+}
+.gallery-item{
+display: flex;
+justify-content: center;
+text-align: center; 
+align-items: center;
+background-size: cover;
+max-width: 280px;
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 10px;
+background-position: center;
+position: relative; /* Ensure the pseudo-overlay behaves correctly */
+overflow: hidden; /* Prevent content overflow */
+transition: background-color 0.3s ease;
+
+}
+
+.gallery-item::before {
+    content: ""; /* Creates an empty element */
+    position: absolute; /* Makes it cover the parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    z-index: 1; /* Places it behind the content but above the background */
+}
+
+.gallery-item:hover::before {
+    background-color: rgba(209, 161, 4, 0.5); /* Black overlay with 50% transparency */
+    
+}
+
+.gallery-item > * {
+    position: relative; /* Keeps child elements above the overlay */
+    /* z-index: 5; Ensures they are above the pseudo-element */
+}
+.gallery-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.visuals {
+    background-image: url('visuals.gif');
+}
+.seeds {
+    background-image: url('seeds.jpeg');
+}
+.plot {
+    background-image: url('plot.gif');
+}
+.map {
+    background-image: url('map.gif');
+}
+#contact {
+    margin: 0;
+    background-color: #34A0A4;
+    padding: 2.5% 4% 6%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.center {
+    display: inline-block;
+}
+.links {
+    font-family: "Inter";
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    gap: 70px;
+    
+}
+h4{
+    font-family: "Inter";
+    font-size: 20px;
+    color: #1E6091;
+    padding-top: 6%;
+}
+.form {
+    background: #D9ED92;
+    font-size: 16px;
+    color: #1E6091;
+    padding: 2% 5%;
+    margin: 9% 11% 5%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border-radius: 10px;
+}
+form {
+    padding: 2% 0;
+}
+label, input, #long-text {
+    font-family: "Inter";
+    font-size: 20px;
+    margin: 10px 0;   
+}
+#fname, #lname {
+    width: 60%;
+}
+#long-text {
+    width: 100%;
+}
+#fname, #lname, #long-text {
+    color: #1E6091;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #34A0A4;
+    border-width: 1.5px;
+}
+
+.button {
+    background-color: #1E6091;
+    color: white;
+    border-style: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+.button:hover {
+    background-color: #34A0A4;
+    color: #fff; 
+}
+.acerca {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 80px 4%;
+    align-items: center;
+    gap: 32px;
+}
+.snowflake {
+    box-sizing: border-box;
+    border-radius: 50%;
+    flex: 1 1 calc(50% - 16px);
+    max-width: 90%; /* Limits width to 90% of its container */
+    max-height: 90vh;
+}
+.about {
+    display: flex; /* Centers the image */
+    align-items: center;
+    justify-content: center;
+    
+}

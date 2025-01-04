@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <title>Contact FlynnTy</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html"><img src="icon.png" alt="iconFlynnty" class="icon"></a>
+                <ul>
+                    <li><a href="aboutflynnty.html">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="form">
+                <h2>Send us a message!</h2>
+                <p>Do you want a start a project? We can help you get started! Send us a message with your idea and we'll get back at you in no time</p>
+                <form>
+                    <label for="fname">What's your name?</label><br>
+                    <input type="text" id="fname" name="fname" ><br>
+                    <label for="lname">What's your email?</label><br>
+                    <input type="email" id="lname" name="lname" ><br>
+                    <label for="lname">Write your message here:</label><br>
+                    <textarea id="long-text" name="text" rows="4"></textarea><br><br>
+                    <input type="submit" value="Send" class="button" onclick="showAlert()">
+                    <script>
+                        // JavaScript function to show the alert
+                        function showAlert() {
+                            alert('Message recieved! In short we will get back at you');
+                        }
+                    </script>
+                </form>
+            </div>
+            <div id="contact">
+                <div class="center">
+                <h2>Contact</h2>
+                <div class="links">
+                    <a href="https://www.instagram.com/vectographie/">Instagram</a>
+                    <a href="contactflynnty.html">Email</a>
+                    <a href="https://tonyfelloni.wordpress.com/">Wordpress</a>
+                </div>
+                <h4>Tony Flynn | 2025</h4></div>
+            </div>
+        </main>
+    </body>
+</html>
