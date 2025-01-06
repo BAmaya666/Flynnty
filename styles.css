@@ -224,16 +224,16 @@ transition: background-color 0.3s ease;
     transition: transform 0.3s ease;
 }
 .visuals {
-    background-image: url('visuals.gif');
+    background-image: url('9.jpg');
 }
 .seeds {
-    background-image: url('seeds.jpeg');
+    background-image: url('11.jpg');
 }
 .plot {
-    background-image: url('plot.gif');
+    background-image: url('12.jpg');
 }
 .map {
-    background-image: url('map.gif');
+    background-image: url('13.jpg');
 }
 #contact {
     margin: 0;
